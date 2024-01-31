@@ -8,11 +8,13 @@ namespace Mission4
 {
     internal class TicTacTools
     {
+        //Takes in board array and returns it
         public string[] getBoard(string[] board)
         {
             return board;
         }
 
+        //Takes board array and then returns it to look like tic-tac-toe board
         public string printBoard(string[] board)
         {
             string boardOutput = "";
@@ -22,10 +24,14 @@ namespace Mission4
             return boardOutput;
         }
 
+        //Takes in board array, whose turn it is, and number of turns there have been, looks to see if there has been a winning
+        //combination, and who won. Returns a message depending on if there was a winner/who it was, if it was a tie, or if there isn't 
+        // a winner and it's the next players turn
         public string gameResult(string[] board, string turn, int turns)
         {
             bool winner = false;
             string message = "";
+            //gets set to the winner, if there is one
             string player = "";
 
         /*Winning combinations: 
