@@ -24,9 +24,12 @@ string turn = "X";
 
 while (gameOver == false)
 {
-    ttt.printBoard(board);
+    Console.WriteLine(ttt.printBoard(board));
     // Get player input
     string move = Console.ReadLine();
+    int moveInt = int.Parse(move) - 1;
+    board[moveInt] = turn;
+
     numTurns++;
     gameOver = ttt.gameResult(board, turn, numTurns);
 
@@ -43,9 +46,9 @@ while (gameOver == false)
 
 
 
+Console.WriteLine(ttt.printBoard(board));
 
-
-
-// Console.WriteLine(ttt.printBoard(board));
+Console.WriteLine("Do you want to play again?");
+bool playAgain = Console.ReadLine();
 
 // Console.WriteLine(ttt.gameResult(board, "X", 6));
