@@ -27,9 +27,10 @@ namespace Mission4
         //Takes in board array, whose turn it is, and number of turns there have been, looks to see if there has been a winning
         //combination, and who won. Returns a message depending on if there was a winner/who it was, if it was a tie, or if there isn't 
         // a winner and it's the next players turn
-        public string gameResult(string[] board, string turn, int turns)
+        public bool gameResult(string[] board, string turn, int turns)
         {
             bool winner = false;
+            bool gameOver = false;
             string message = "";
             //gets set to the winner, if there is one
             string player = "";
@@ -82,16 +83,18 @@ namespace Mission4
 
             if (winner == true)
             {
-                message += turn + " has won the game!";
+                Console.WriteLine(turn + " has won the game!");
+                gameOver = true;
             }
             else if (turns >= 9) {
-                message += "Cat's game. No winner.";
+                Console.WriteLine("Cat's game. No winner.");
+                gameOver = true;
             }
             else {
                 message += "No winner yet. Next player's turn";
             }
 
-            return message;
+            return gameOver;
         }
     }
 }
