@@ -40,7 +40,7 @@ namespace Mission4
          * (159), (357)
          * Subtract 1 from each number to work w/ array
          */
-            if (board[0] == turn & board[1] == turn & board[2] == turn)
+            if (board[0] == turn && board[1] == turn & board[2] == turn)
             {
                 winner = true;
                 player = turn;
