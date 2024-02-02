@@ -35,7 +35,7 @@ namespace Mission4
             //gets set to the winner, if there is one
             string player = "";
 
-        /*Winning combinations: 
+        /* Winning combinations: 
          * (123), (456), (789), (147), (258), (369)
          * (159), (357)
          * Subtract 1 from each number to work w/ array

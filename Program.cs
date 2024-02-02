@@ -12,6 +12,38 @@ string[] board = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 //Game Logic
 
+Console.WriteLine("Welcome to tic tac toe!");
+Console.WriteLine("For each players turn, enter the number on the board you would like to play.");
+Console.WriteLine("Here is the board, X's go first!");
+
+// initialize game stuffs
+int numTurns = 0;
+bool gameOver = false;
+string turn = "X";
+
+while (gameOver == false)
+{
+    ttt.printBoard();
+    // Get player input
+    string move = Console.ReadLine();
+    gameOver = ttt.gameResult(board, turn, numTurns);
+
+    // change turns
+    if (turn == "X")
+    {
+        turn = "O";
+    }
+    else
+    {
+        turn = "X";
+    }
+}
+
+
+
+
+
+
 Console.WriteLine(ttt.printBoard(board));
 
 Console.WriteLine(ttt.gameResult(board, "X", 6));
