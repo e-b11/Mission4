@@ -18,14 +18,16 @@ Console.WriteLine("Here is the board, X's go first!");
 
 // initialize game stuffs
 int numTurns = 0;
+
 bool gameOver = false;
 string turn = "X";
 
 while (gameOver == false)
 {
-    ttt.printBoard();
+    ttt.printBoard(board);
     // Get player input
     string move = Console.ReadLine();
+    numTurns++;
     gameOver = ttt.gameResult(board, turn, numTurns);
 
     // change turns
@@ -44,6 +46,6 @@ while (gameOver == false)
 
 
 
-Console.WriteLine(ttt.printBoard(board));
+// Console.WriteLine(ttt.printBoard(board));
 
-Console.WriteLine(ttt.gameResult(board, "X", 6));
+// Console.WriteLine(ttt.gameResult(board, "X", 6));
