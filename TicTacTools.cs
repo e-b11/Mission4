@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+//Eliza Sorensen, Emma Bastian, Josh Michaelson, Javier De los Reyes
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
