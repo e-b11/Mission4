@@ -38,6 +38,8 @@ class Program {
             Console.WriteLine(ttt.printBoard(board));
             // Get player input
 
+            Console.WriteLine(turn + "'s turn!");
+
             string moveStr = Console.ReadLine();
 
             //look to see if input is/could be an integer
